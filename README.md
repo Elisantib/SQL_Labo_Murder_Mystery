@@ -70,7 +70,7 @@ Aquí está la consulta necesaria para mostrarte las tablas en la base de datos 
 
 ¡Genial! Ahora que sabemos qué tablas están disponibles, es hora de averiguar las columnas que tiene cada tabla junto con el tipo de datos de cada columna. Escribimos una consulta que muestre el nombre de la tabla, el nombre de la columna y el tipo de datos para cada tabla en la base de datos del Departamento de Policía utilizando la vista `information_schema.columns`. Nos aseguramos de que la salida esté ordenada por nombre de tabla y luego por nombre de columna (ascendente):
 
-### Diagrama de Relaciones de Entidad (Opcional)
+### Diagrama de Relaciones de Entidad 
 
 Después de hacer un poco de trabajo de detective y encontrar las tablas en la base de datos del Departamento de Policía, descubres que hay un ERD (Diagrama de Relaciones de Entidad). Esto puede ser realmente útil en tu búsqueda para encontrar al asesino. Si lo prefieres, desafíate a ti mismo (y tus habilidades en SQL) a continuar solo consultando el `information_schema` según sea necesario. De lo contrario, puedes hacer clic en el desplegable a continuación para revelar el ERD que te ayudará a ver las tablas y las relaciones en la base de datos del Departamento de Policía de un vistazo:
 
