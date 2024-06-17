@@ -1,6 +1,7 @@
 #SQL Murder Mystery!
 
 Adapted By: Martin Arroyo.
+
 Edit for: Elisa Santibañez Palma
 
 <a href="https://colab.research.google.com/drive/1Q3LJaeH3eF8wzTWc84yABuGMcrwbNNwF?authuser=3#scrollTo=ZbLp7m-_OzAR" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
@@ -19,7 +20,7 @@ Para comenzar y ejecutar nuestras consultas, presionamos play en la celda de aba
 
 Para ejecutar las consultas, creamos una nueva celda de `Code` y escribimos `%%sql` en la parte superior. Luego podemos escribir nuestras consultas debajo.
 
-```json
+```python
 %%capture
 # @title Press Play { display-mode: "form" }
 # Install `teachdb` and `coop_grader`
