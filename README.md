@@ -89,7 +89,7 @@ No olvidamos usar `%%sql` en la parte superior de las celdas de `Code` para que 
 
 ------------
 
-###1. Reuniendo pistas de la escena del crimen
+### 1. Reuniendo pistas de la escena del crimen
 
 Las imágenes de seguridad muestran que hubo 2 testigos. El primer testigo vive en la última casa de "Northwestern Dr". La segunda testigo, llamada Annabel, vive en algún lugar de "Franklin Ave".
 
@@ -99,7 +99,7 @@ Las imágenes de seguridad muestran que hubo 2 testigos. El primer testigo vive 
     FROM crime_scene_report
     WHERE type = 'murder' AND date = (20180115) AND city = 'SQL City'
 
-###2. Encontrando a Annabel Miller y Morty Schapiro
+### 2. Encontrando a Annabel Miller y Morty Schapiro
 
 Reunimos algunos datos de los dos principales testigos de la escena del crimen
 
@@ -118,7 +118,7 @@ Reunimos algunos datos de los dos principales testigos de la escena del crimen
     WHERE address_street_name IN ('Northwestern Dr')
     order by address_number DESC
 
-###3. Entrevista a testigos Annabel y Morty
+### 3. Entrevista a testigos Annabel y Morty
 
 Revisamos las entrevistas correspondientes de los dos testigos. Esto fue lo que dijeron:
 
@@ -132,7 +132,7 @@ Revisamos las entrevistas correspondientes de los dos testigos. Esto fue lo que 
     FROM interview
     WHERE person_id IN ('16371', '14887')
 
-###4. Check in del 9 de enero
+### 4. Check in del 9 de enero
 
 Averiguando sobre las personas que asistieron al "Get Fit Now Gym" ese 9 de enero que Annabel detalló y además según el id de membresía que vió el testigo Morty
 
@@ -142,7 +142,7 @@ Averiguando sobre las personas que asistieron al "Get Fit Now Gym" ese 9 de ener
     FROM get_fit_now_check_in
     WHERE check_in_date = 20180109 AND membership_id LIKE '48Z%'
 
-###5. Placa de vehículo a donde subió el supuesto sospechoso
+### 5. Placa de vehículo a donde subió el supuesto sospechoso
 
 La placa del vehículo a la que se subió el supuesto asesino contenía los siguientes caracteres: ‘H42W…’
 
@@ -152,7 +152,7 @@ La placa del vehículo a la que se subió el supuesto asesino contenía los sigu
     FROM drivers_license
     WHERE plate_number LIKE 'H42W%'
 
-###6. Dueño del vehículo
+### 6. Dueño del vehículo
 
 La dueña del vehículo en el que se subió el asesino es ‘Maxine Whitely’
 
@@ -162,7 +162,7 @@ La dueña del vehículo en el que se subió el asesino es ‘Maxine Whitely’
     FROM person
     WHERE license_id IN ('183779')
 
-###7. Miembros registrados en "Get Fit Now Gym"
+### 7. Miembros registrados en "Get Fit Now Gym"
 
 Averiguamos quienes son los miembros del GYM que estuvieron ese 9 de enero según el id que vio el testigo Morty.
 
@@ -174,7 +174,7 @@ Estas dos personas, miembros gold del Gym hasta ahora son sospechosas del asesin
     FROM get_fit_now_member
     WHERE membership_status = 'gold' AND id IN ('48Z7A', '48Z55')
 
-###8. Entrevista sospechosos
+### 8. Entrevista sospechosos
 
 Revisamos nuevamente las entrevistas, pero de estos dos sospechosos, solo se encontró una.
 
@@ -186,7 +186,7 @@ Revisamos nuevamente las entrevistas, pero de estos dos sospechosos, solo se enc
     FROM interview
     WHERE person_id IN ('28819', '67318')
 
-###9. Coincidencias con descripción de Jeremy
+### 9. Coincidencias con descripción de Jeremy
 
     %%sql
     
@@ -200,7 +200,7 @@ Revisamos nuevamente las entrevistas, pero de estos dos sospechosos, solo se enc
     FROM person
     WHERE license_id IN ('202298', '291182', '918773')
 
-###10. Descubriendo a la mujer que describió Jeremy
+### 10. Descubriendo a la mujer que describió Jeremy
 
 Miranda Priestly es la mujer que contrató a Jeremy, coincide exactamente con su descripción.
 
@@ -216,7 +216,7 @@ Miranda Priestly es la mujer que contrató a Jeremy, coincide exactamente con su
     FROM income
     WHERE ssn = 987756388
 
-#CASO RESUELTO!!!
+# CASO RESUELTO!!!
 
 ASESINA ENCONTRADA!
 
