@@ -137,7 +137,7 @@ Revisamos las entrevistas correspondientes de los dos testigos. Esto fue lo que 
 
 Averiguando sobre las personas que asistieron al "Get Fit Now Gym" ese 9 de enero que Annabel detalló y además según el id de membresía que vió el testigo Morty
 
-%%sql
+    %%sql
 
     SELECT *
     FROM get_fit_now_check_in
@@ -147,7 +147,7 @@ Averiguando sobre las personas que asistieron al "Get Fit Now Gym" ese 9 de ener
 
 La placa del vehículo a la que se subió el supuesto asesino contenía los siguientes caracteres: ‘H42W…’
 
-%%sql
+    %%sql
 
     SELECT *
     FROM drivers_license
